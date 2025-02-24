@@ -26,7 +26,7 @@ yarn serve
 如果你可以使用 [npx](https://github.com/npm/npx) (最新版的 npm 应该已经自带)，也可以直接这样调用命令：
 
 ```bash
-npx vue-cli-service serve
+npx --no vue-cli-service serve
 ```
 
 ::: tip 提示
@@ -103,13 +103,13 @@ npx vue-cli-service serve
 有些 CLI 插件会向 `vue-cli-service` 注入额外的命令。例如 `@vue/cli-plugin-eslint` 会注入 `vue-cli-service lint` 命令。你可以运行以下命令查看所有注入的命令：
 
 ```bash
-npx vue-cli-service help
+npx --no vue-cli-service help
 ```
 
 你也可以这样学习每个命令可用的选项：
 
 ```bash
-npx vue-cli-service help [command]
+npx --no vue-cli-service help [command]
 ```
 
 ## 缓存和并行处理

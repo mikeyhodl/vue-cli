@@ -26,7 +26,7 @@ yarn serve
 Если у вас установлен [npx](https://github.com/npm/npx) (должен поставляться в комплекте с последней версией npm), то вы также можете запустить бинарник напрямую:
 
 ```bash
-npx vue-cli-service serve
+npx --no vue-cli-service serve
 ```
 
 ::: tip Совет
@@ -114,13 +114,13 @@ npx vue-cli-service serve
 Некоторые плагины CLI добавляют собственные команды в `vue-cli-service`. Например, `@vue/cli-plugin-eslint` внедряет команду `vue-cli-service lint`. Вы можете посмотреть весь список команд запустив:
 
 ```bash
-npx vue-cli-service help
+npx --no vue-cli-service help
 ```
 
 Вы также можете узнать о доступных параметрах каждой команды с помощью:
 
 ```bash
-npx vue-cli-service help [command]
+npx --no vue-cli-service help [command]
 ```
 
 ## Исключение плагинов при запуске
@@ -128,7 +128,7 @@ npx vue-cli-service help [command]
 Можно исключить определённые плагины при запуске команды, передав имя плагина опцией `--skip-plugins`.
 
 ```bash
-npx vue-cli-service build --skip-plugins pwa
+npx --no vue-cli-service build --skip-plugins pwa
 ```
 
 ::: tip СОВЕТ
@@ -138,16 +138,16 @@ npx vue-cli-service build --skip-plugins pwa
 Можно пропустить несколько подключаемых плагинов, передав их имена через запятую:
 
 ```bash
-npx vue-cli-service build --skip-plugins pwa,apollo
+npx --no vue-cli-service build --skip-plugins pwa,apollo
 ```
 
 Имена плагинов разрешаются также, как и при установке, что подробнее описано [здесь](./plugins-and-presets.md#установка-пnагинов-в-существующий-проект)
 
 ```bash
 # все вызовы равнозначны
-npx vue-cli-service build --skip-plugins pwa
-npx vue-cli-service build --skip-plugins @vue/pwa
-npx vue-cli-service build --skip-plugins @vue/cli-plugin-pwa
+npx --no vue-cli-service build --skip-plugins pwa
+npx --no vue-cli-service build --skip-plugins @vue/pwa
+npx --no vue-cli-service build --skip-plugins @vue/cli-plugin-pwa
 ```
 
 ## Кэширование и параллелизация
